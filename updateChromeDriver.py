@@ -93,6 +93,7 @@ class UpdateChromeDriver:
 if __name__ == "__main__":
     destination = input("Enter folder destination: ") or os.getcwd()
     print(f"Using {destination} as install destination.")
-    patform = input("Enter the platform for which you want chromedriver (win32, win64, linux64, mac-arm64, mac-x64): ") or "win64"
-    print(f"Updating chromedriver for platform: {patform}")
-    UpdateChromeDriver().update_chrome_driver(destination, platform = "win64")
+    platform = input("Enter the platform for which you want chromedriver (win32, win64, linux64, mac-arm64, mac-x64): ") or "win64"
+    print(f"Updating chromedriver for platform: {platform}")
+
+    UpdateChromeDriver().update_chrome_driver(destination, platform)
